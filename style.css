@@ -4,16 +4,14 @@
     margin: 0%;
     box-sizing: border-box;
 }
-p{
+
+p {
     /* text-align: justify !important; */
     line-height: 1.5;
 }
+
 /* Global Resets */
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+
 
 .main {
     background-color: black;
@@ -22,16 +20,20 @@ p{
 
 /* Body padding to prevent content from going under fixed navbar */
 body {
-    padding-top: 100px;     background-color:#000000; 
-    min-height: 200vh; /* For demonstration of fixed navbar and scrolling */
-    margin: 0; /* Remove default body margin */
-    font-family: Arial, sans-serif; /* A basic font for readability */
+    padding-top: 100px;
+    background-color: #000000;
+    min-height: 200vh;
+    /* For demonstration of fixed navbar and scrolling */
+    margin: 0;
+    /* Remove default body margin */
+    font-family: Arial, sans-serif;
+    /* A basic font for readability */
 }
 
 /* FOR NAVIGATION BAR */
 header {
     display: flex;
-    padding: 15px 30px 15px 15px;
+    padding: 15px 50px;
     background-color: rgba(0, 0, 0, 0.8);
     width: 100%;
     position: fixed;
@@ -39,13 +41,16 @@ header {
     left: 0;
     z-index: 1000;
     align-items: center;
-    height: 100px; /* Fixed height for the header */
-    box-sizing: border-box; /* Include padding in height */
+    height: 100px;
+    /* Fixed height for the header */
+    box-sizing: border-box;
+    /* Include padding in height */
 }
 
 nav {
     display: flex;
-    height: 70px; /* Height for the nav content within header */
+    height: 70px;
+    /* Height for the nav content within header */
     justify-content: space-between;
     width: 100%;
     align-items: center;
@@ -56,7 +61,8 @@ nav {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    flex-shrink: 0; /* Prevent shrinking on smaller screens */
+    flex-shrink: 0;
+    /* Prevent shrinking on smaller screens */
 }
 
 /* FOR IMAGE OF NAV BAR */
@@ -94,16 +100,21 @@ nav {
     font-size: 17px;
     cursor: pointer;
     transition: color 0.3s ease;
-    white-space: nowrap; /* Prevent text wrapping */
+    white-space: nowrap;
+    /* Prevent text wrapping */
 }
 
 .nav-page li a:hover,
-.nav-page li a.active { /* Added active state for the Courses link */
+.nav-page li a.active {
+    /* Added active state for the Courses link */
     color: blue;
 }
+
 .nav-page li a:active {
-    transform: translateY(1px); /* Slight push down effect */
-    color: darkblue; /* Darker blue on press */
+    transform: translateY(1px);
+    /* Slight push down effect */
+    color: darkblue;
+    /* Darker blue on press */
 }
 
 
@@ -113,12 +124,13 @@ nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    flex-shrink: 0; /* Prevent shrinking on smaller screens */
+    flex-shrink: 0;
+    /* Prevent shrinking on smaller screens */
 }
 
 .nav-but button {
     background-color: blueviolet;
-    padding: 15px 14px;
+    padding: 11px 14px;
     color: white;
     font-size: 17px;
     border: none;
@@ -130,16 +142,16 @@ nav {
 
 .nav-but button:hover {
     background: linear-gradient(180deg, rgba(211, 231, 232, 1) 0%, rgba(216, 216, 232, 1) 51%, rgba(227, 216, 216, 1) 100%);
-    padding: 17px 16px;
     color: blue;
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
 }
 
 /* Hamburger Menu Icon (Hidden by default on desktop) */
 .hamburger-menu {
-    display: none; /* Controlled by media queries */
+    display: none;
+    /* Controlled by media queries */
     font-size: 30px;
     color: white;
     cursor: pointer;
@@ -149,23 +161,32 @@ nav {
 
 /* Dropdown Panel for Courses (Desktop) */
 .dropdown-panel {
-    display: none; /* Hidden by default, shown by JS */
+    display: none;
+    /* Hidden by default, shown by JS */
     position: fixed;
     /* Position relative to the parent header/nav for full width */
-    top: 100px; /* Height of the header */
+    top: 100px;
+    /* Height of the header */
     left: 500px;
-    width: 50%; /* Spans full width of the header */
-    box-shadow: 10px 10px 10px rgba(255, 255, 255,0.9);
+    width: 50%;
+    /* Spans full width of the header */
+    box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.9);
     color: black;
-    border: 1px solid rgba(255, 255, 255,0.6);
-    z-index: 999; /* Below the header but above other content */
-    border-radius: 0 0 10px 10px; /* Rounded corners at the bottom */
-    overflow: hidden; /* Ensure content stays within border-radius */
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Subtle shadow */
-    box-sizing: border-box; /* Include padding/border in width */
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    z-index: 999;
+    /* Below the header but above other content */
+    border-radius: 0 0 10px 10px;
+    /* Rounded corners at the bottom */
+    overflow: hidden;
+    /* Ensure content stays within border-radius */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow */
+    box-sizing: border-box;
+    /* Include padding/border in width */
 }
 
-.dropdown-panel.show-dropdown { /* Class added by JS to show the dropdown */
+.dropdown-panel.show-dropdown {
+    /* Class added by JS to show the dropdown */
     display: flex;
 }
 
@@ -173,62 +194,80 @@ nav {
     width: 30%;
     border-right: 1px solid #ccc;
     color: white;
-    background-color: rgba(18, 18, 192,0.1); 
-    padding: 10px 0; /* Add some vertical padding */
+    background-color: rgba(18, 18, 192, 0.1);
+    padding: 10px 0;
+    /* Add some vertical padding */
     box-sizing: border-box;
 }
 
 .dropdown-panel .categories li {
     list-style: none;
-    padding: 10px 20px; /* Increased padding for better click area */
+    padding: 10px 20px;
+    /* Increased padding for better click area */
     cursor: pointer;
     transition: background-color 0.2s ease;
-    white-space: nowrap; /* Prevent category text wrapping */
+    white-space: nowrap;
+    /* Prevent category text wrapping */
 }
 
 .dropdown-panel .categories li:hover,
 .dropdown-panel .categories li.active {
-    background-color: rgba(220, 220, 220, 0.2); /* Lighter gray hover/active */
+    background-color: rgba(220, 220, 220, 0.2);
+    /* Lighter gray hover/active */
     /* Removed border styles here as they can interfere with clean design */
 }
 
 .dropdown-panel .courses {
     width: 80%;
-    padding: 15px; /* Increased padding */
+    padding: 15px;
+    /* Increased padding */
     display: flex;
     flex-wrap: wrap;
-    gap: 10px; /* Gap between course items */
+    gap: 10px;
+    /* Gap between course items */
     list-style: none;
     margin: 0;
-    background-color: rgba(18, 18, 192, 0.2); /* Lighter blue, less opaque */
+    background-color: rgba(18, 18, 192, 0.2);
+    /* Lighter blue, less opaque */
     border-bottom-right-radius: 10px;
     box-sizing: border-box;
-    justify-content: flex-start; /* Align courses to the start */
-    align-content: flex-start; /* Align rows to the start */
+    justify-content: flex-start;
+    /* Align courses to the start */
+    align-content: flex-start;
+    /* Align rows to the start */
 }
 
 .dropdown-panel .courses li {
-    width: calc(50% - 5px); /* Two columns with gap */
-    border-radius: 5px; /* Slightly more rounded */
-    height: 40px; /* Taller items */
-    padding: 0 10px; /* Horizontal padding for text */
+    width: calc(50% - 5px);
+    /* Two columns with gap */
+    border-radius: 5px;
+    /* Slightly more rounded */
+    height: 40px;
+    /* Taller items */
+    padding: 0 10px;
+    /* Horizontal padding for text */
     box-sizing: border-box;
-    line-height: 40px; /* Vertically center text */
+    line-height: 40px;
+    /* Vertically center text */
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Align text to the left */
-    border: 1px solid rgba(18, 18, 192, 0.2); /* Border matching background */
+    justify-content: flex-start;
+    /* Align text to the left */
+    border: 1px solid rgba(18, 18, 192, 0.2);
+    /* Border matching background */
     cursor: pointer;
-    color: #ffffff; /* Darker text for readability */
-    background-color: rgba(255, 255, 255,0.2); /* White background for course items */
+    color: #ffffff;
+    /* Darker text for readability */
+    background-color: rgba(255, 255, 255, 0.2);
+    /* White background for course items */
     transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .dropdown-panel .courses li:hover {
-    background-color: rgba(255, 255, 255,0.4); 
-    box-shadow: 4px 4px 10px rgba(255, 255, 255,0.2);
-   
-    border: rgba(255, 255, 255,0.5) solid 1px;
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.2);
+
+    border: rgba(255, 255, 255, 0.5) solid 1px;
     color: white;
 }
 
@@ -240,13 +279,16 @@ nav {
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.9);
-    z-index: 9999; /* Higher z-index to cover everything */
+    z-index: 9999;
+    /* Higher z-index to cover everything */
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* Align items from the top */
-    padding-top: 70px; /* Space from the top */
+    justify-content: flex-start;
+    /* Align items from the top */
+    padding-top: 70px;
+    /* Space from the top */
     box-sizing: border-box;
 
     transform: translateX(100%);
@@ -272,7 +314,8 @@ nav {
     font-size: 40px;
     color: white;
     cursor: pointer;
-    z-index: 10000; /* Ensure close button is clickable */
+    z-index: 10000;
+    /* Ensure close button is clickable */
 }
 
 .mobile-nav-overlay ul.mobile-nav-page {
@@ -282,13 +325,16 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 60px; /* Adjusted margin for overall layout */
-    margin-bottom: 20px; /* Space before button */
+    margin-top: 60px;
+    /* Adjusted margin for overall layout */
+    margin-bottom: 20px;
+    /* Space before button */
 }
 
 .mobile-nav-overlay ul.mobile-nav-page li {
     margin: 15px 0;
-    width: 100%; /* Make list items take full width for better tapping */
+    width: 100%;
+    /* Make list items take full width for better tapping */
     text-align: center;
 }
 
@@ -307,36 +353,48 @@ nav {
 
 /* Mobile Courses Sub-Dropdown (nested) */
 .mobile-courses-dropdown {
-    display: none; /* Hidden by default, shown by JS */
+    display: none;
+    /* Hidden by default, shown by JS */
     list-style: none;
     padding: 0;
     margin-top: 10px;
-    background-color: rgba(255, 255, 255, 0.1); /* Slightly visible background */
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Slightly visible background */
     border-radius: 5px;
-    max-height: 0; /* For collapse effect */
-    overflow: hidden; /* Hide overflow during collapse */
-    transition: max-height 0.3s ease-out; /* Smooth transition */
+    max-height: 0;
+    /* For collapse effect */
+    overflow: hidden;
+    /* Hide overflow during collapse */
+    transition: max-height 0.3s ease-out;
+    /* Smooth transition */
 }
 
 .mobile-courses-dropdown.active {
-    display: block; /* Show the block */
-    max-height: 300px; /* Adjust as needed to fit all courses, or use 'none' for instant */
+    display: block;
+    /* Show the block */
+    max-height: 300px;
+    /* Adjust as needed to fit all courses, or use 'none' for instant */
     /* Consider a dynamic max-height based on content for more precise animation */
 }
 
 .mobile-courses-dropdown li {
-    margin: 0; /* Reset margin */
+    margin: 0;
+    /* Reset margin */
 }
 
 .mobile-courses-dropdown li a {
-    font-size: 18px; /* Smaller font for sub-items */
-    padding: 8px 15px; /* Adjust padding */
-    color: lightgray; /* Different color for sub-items */
+    font-size: 18px;
+    /* Smaller font for sub-items */
+    padding: 8px 15px;
+    /* Adjust padding */
+    color: lightgray;
+    /* Different color for sub-items */
     display: block;
 }
 
 .mobile-courses-dropdown li a:hover {
-    color: skyblue; /* Hover color for sub-items */
+    color: skyblue;
+    /* Hover color for sub-items */
 }
 
 
@@ -345,7 +403,9 @@ nav {
     margin-top: 30px;
     justify-content: center;
     display: flex;
+
 }
+
 .mobile-nav-overlay .mobile-nav-button button {
     padding: 12px 20px;
     font-size: 18px;
@@ -357,6 +417,7 @@ nav {
     white-space: nowrap;
     transition: all 0.3s ease;
 }
+
 .mobile-nav-overlay .mobile-nav-button button:hover {
     background: linear-gradient(180deg, rgba(211, 231, 232, 1) 0%, rgba(216, 216, 232, 1) 51%, rgba(227, 216, 216, 1) 100%);
     color: blue;
@@ -366,14 +427,18 @@ nav {
 @media (max-width: 1224px) {
     header {
         padding: 10px 15px;
-        height: 80px; /* Slightly reduced header height */
+        height: 80px;
+        /* Slightly reduced header height */
     }
+
     nav {
-        height: 50px; /* Reduced nav content height */
+        height: 50px;
+        /* Reduced nav content height */
     }
 
     .nav-image {
-        width: 18%; /* Adjusted width */
+        width: 18%;
+        /* Adjusted width */
     }
 
     .nav-image img {
@@ -382,16 +447,19 @@ nav {
     }
 
     .nav-pg {
-        width: 55%; /* Adjusted width */
+        width: 55%;
+        /* Adjusted width */
     }
 
     .nav-page li a {
         font-size: 15px;
-        padding: 0 6px; /* Reduced padding */
+        padding: 0 6px;
+        /* Reduced padding */
     }
 
     .nav-but {
-        width: 20%; /* Adjusted width */
+        width: 20%;
+        /* Adjusted width */
     }
 
     .nav-but button {
@@ -401,24 +469,29 @@ nav {
 
     /* Dropdown panel position for smaller screens */
     .dropdown-panel {
-        top: 80px; /* Adjust based on new header height */
-        left:400px;
+        top: 80px;
+        /* Adjust based on new header height */
+        left: 400px;
     }
 }
 
 @media (max-width:990px) {
-      .dropdown-panel {
-        top: 80px; /* Adjust based on new header height */
-        left:300px;
+    .dropdown-panel {
+        top: 80px;
+        /* Adjust based on new header height */
+        left: 300px;
     }
 }
 
 /* Mobile devices (max-width: 768px) */
 @media (max-width: 780px) {
     header {
-        height: 70px; /* Mobile header height */
-        padding: 10px 15px; /* Consistent padding */
+        height: 70px;
+        /* Mobile header height */
+        padding: 10px 15px;
+        /* Consistent padding */
     }
+
     nav {
         height: 50px;
         justify-content: space-between;
@@ -426,11 +499,13 @@ nav {
 
     .nav-image {
         width: auto;
-        flex-grow: 1; /* Allow image to take available space */
+        flex-grow: 1;
+        /* Allow image to take available space */
     }
 
     .nav-image img {
-        height: 45px; /* Smaller logo for mobile */
+        height: 45px;
+        /* Smaller logo for mobile */
         max-height: 45px;
     }
 
@@ -442,7 +517,8 @@ nav {
 
     /* Hide desktop dropdown on mobile */
     .dropdown-panel {
-        display: none !important; /* Force hide the desktop dropdown */
+        display: none !important;
+        /* Force hide the desktop dropdown */
     }
 
     /* Show hamburger menu icon */
@@ -453,20 +529,26 @@ nav {
 
     /* Mobile overlay adjustments */
     .mobile-nav-overlay {
-        padding-top: 50px; /* Adjusted padding */
+        padding-top: 50px;
+        /* Adjusted padding */
     }
+
     .mobile-nav-overlay .close-btn {
         top: 15px;
         right: 15px;
         font-size: 35px;
     }
+
     .mobile-nav-overlay ul.mobile-nav-page {
-        margin-top: 40px; /* Adjusted margin */
+        margin-top: 40px;
+        /* Adjusted margin */
     }
+
     .mobile-nav-overlay ul.mobile-nav-page li a {
         font-size: 22px;
         padding: 8px 15px;
     }
+
     .mobile-nav-overlay .mobile-nav-button button {
         padding: 10px 18px;
         font-size: 16px;
@@ -477,8 +559,10 @@ nav {
 @media (max-width: 480px) {
     header {
         padding: 8px 10px;
-        height: 60px; /* Even smaller header height */
+        height: 60px;
+        /* Even smaller header height */
     }
+
     nav {
         height: 40px;
     }
@@ -496,13 +580,16 @@ nav {
     .mobile-nav-overlay {
         padding-top: 40px;
     }
+
     .mobile-nav-overlay .close-btn {
         font-size: 30px;
     }
+
     .mobile-nav-overlay ul.mobile-nav-page li a {
         font-size: 18px;
         padding: 6px 12px;
     }
+
     .mobile-nav-overlay .mobile-nav-button button {
         padding: 8px 15px;
         font-size: 14px;
@@ -515,12 +602,14 @@ nav {
         padding: 5px 8px;
         height: 50px;
     }
+
     nav {
         height: 35px;
     }
 
     .nav-image img {
-        height: 35px; /* Smallest logo size */
+        height: 35px;
+        /* Smallest logo size */
         max-height: 35px;
     }
 
@@ -532,21 +621,26 @@ nav {
     .mobile-nav-overlay {
         padding-top: 30px;
     }
+
     .mobile-nav-overlay .close-btn {
         font-size: 28px;
         top: 10px;
         right: 10px;
     }
+
     .mobile-nav-overlay ul.mobile-nav-page li {
         margin: 10px 0;
     }
+
     .mobile-nav-overlay ul.mobile-nav-page li a {
         font-size: 16px;
         padding: 5px 10px;
     }
+
     .mobile-nav-overlay .mobile-nav-button {
         margin-top: 20px;
     }
+
     .mobile-nav-overlay .mobile-nav-button button {
         padding: 6px 12px;
         font-size: 12px;
@@ -559,7 +653,8 @@ nav {
 .hero-section {
     background: radial-gradient(circle, rgba(51, 74, 204, 1) 0%, rgba(0, 0, 0, 1) 56%);
     width: 100%;
-    height: 100%; /* Consider using min-height for better adaptability */
+    height: 100%;
+    /* Consider using min-height for better adaptability */
     display: flex;
     justify-content: center;
     padding-top: 80px;
@@ -636,9 +731,11 @@ nav {
     height: 100%;
     display: flex;
     background-color: black;
-    flex-direction: column; /* Stack content vertically on smaller screens */
+    flex-direction: column;
+    /* Stack content vertically on smaller screens */
     align-items: center;
-    overflow: hidden; /* Hide overflow to prevent horizontal scrollbar on the main section */
+    overflow: hidden;
+    /* Hide overflow to prevent horizontal scrollbar on the main section */
 }
 
 .sec-two {
@@ -654,30 +751,42 @@ nav {
     color: white;
     font-family: sans-serif;
     font-weight: 500;
-    font-size: 45px; /* Added a base font size */
+    font-size: 45px;
+    /* Added a base font size */
 }
 
 /* Base styles for the overflowing containers */
 .section-two-one {
-    overflow: hidden; /* Hide scrollbar for all browsers */
+    overflow: hidden;
+    /* Hide scrollbar for all browsers */
     -ms-overflow-style: none;
     scrollbar-width: none;
-    width: 80%; /* Start with full width and adjust inner content */
-    margin-bottom: 20px; /* Space between rows */
+    width: 80%;
+    /* Start with full width and adjust inner content */
+    margin-bottom: 20px;
+    /* Space between rows */
 }
+
 .section-two-two {
-    overflow: hidden; /* Hide scrollbar for all browsers */
+    overflow: hidden;
+    /* Hide scrollbar for all browsers */
     -ms-overflow-style: none;
     scrollbar-width: none;
-    width: 80%; /* Start with full width and adjust inner content */
-    margin-bottom: 20px; /* Space between rows */
+    width: 80%;
+    /* Start with full width and adjust inner content */
+    margin-bottom: 20px;
+    /* Space between rows */
 }
+
 .section-two-three {
-    overflow: hidden; /* Hide scrollbar for all browsers */
+    overflow: hidden;
+    /* Hide scrollbar for all browsers */
     -ms-overflow-style: none;
     scrollbar-width: none;
-    width: 65%; /* Start with full width and adjust inner content */
-    margin-bottom: 20px; /* Space between rows */
+    width: 65%;
+    /* Start with full width and adjust inner content */
+    margin-bottom: 20px;
+    /* Space between rows */
 }
 
 /* Hide scrollbar for Webkit browsers */
@@ -694,11 +803,14 @@ nav {
     display: flex;
     height: 210px;
     gap: 10px;
-    padding: 35px 0px 0px 35px; /* Keep initial padding */
-    white-space: nowrap; /* Prevent images from wrapping */
-    will-change: transform; /* Optimize for animation */
+    padding: 35px 0px 0px 35px;
+    /* Keep initial padding */
+    white-space: nowrap;
+    /* Prevent images from wrapping */
+    will-change: transform;
+    /* Optimize for animation */
 
-    object-fit:fill;
+    object-fit: fill;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
@@ -706,34 +818,58 @@ nav {
 /* Specific animation names and durations */
 .section-two-one-images {
     animation-name: flowone;
-    animation-duration: 40s; /* Increased duration for smoother flow */
+    animation-duration: 40s;
+    /* Increased duration for smoother flow */
 }
 
 .section-two-two-images {
     animation-name: flowtwo;
-    animation-duration: 45s; /* Slightly different duration */
+    animation-duration: 45s;
+    /* Slightly different duration */
     animation-delay: 1s;
 }
 
 .section-two-three-images {
     animation-name: flowthree;
-    animation-duration: 50s; /* Different duration */
+    animation-duration: 50s;
+    /* Different duration */
 }
 
 /* Keyframes for the continuous scrolling effect */
 @keyframes flowone {
-    0% { transform: translateX(0%); }
-    100% { transform: translateX(calc(-100% - 10px * 9)); } /* Adjust based on number of images and gap */
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(calc(-100% - 10px * 9));
+    }
+
+    /* Adjust based on number of images and gap */
 }
 
 @keyframes flowtwo {
-    0% { transform: translateX(0%); }
-    100% { transform: translateX(calc(-100% - 10px * 8)); } /* Adjust based on number of images and gap */
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(calc(-100% - 10px * 8));
+    }
+
+    /* Adjust based on number of images and gap */
 }
 
 @keyframes flowthree {
-    0% { transform: translateX(0%); }
-    100% { transform: translateX(calc(-100% - 10px * 7)); } /* Adjust based on number of images and gap */
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(calc(-100% - 10px * 7));
+    }
+
+    /* Adjust based on number of images and gap */
 }
 
 
@@ -742,30 +878,38 @@ nav {
 .section-two-three-images img {
     height: 90%;
     border-radius: 10px;
-    object-fit: cover; /* Ensure images cover their area */
-    flex-shrink: 0; /* Prevent images from shrinking */
-    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    object-fit: cover;
+    /* Ensure images cover their area */
+    flex-shrink: 0;
+    /* Prevent images from shrinking */
+    transition: all 0.3s ease;
+    /* Smooth transition for hover effects */
 }
 
 /* Image widths - ensure these add up to more than 100% for smooth looping */
 .section-two-one-images img {
-    width: 20%; 
+    width: 20%;
 }
+
 /* Example: 5 images fill 100%, 6 images fill 120% */
 
 .section-two-two-images img {
-    width: 22%; /* Example: 5 images fill 110% */
+    width: 22%;
+    /* Example: 5 images fill 110% */
 }
 
 .section-two-three-images img {
-    width: 23%; /* Example: 5 images fill 115% */
+    width: 23%;
+    /* Example: 5 images fill 115% */
 }
 
 .section-two-one-images img:hover,
 .section-two-two-images img:hover,
 .section-two-three-images img:hover {
-    transform: scale(1.05); /* Slightly scale on hover */
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Add a subtle shadow */
+    transform: scale(1.05);
+    /* Slightly scale on hover */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    /* Add a subtle shadow */
 }
 
 /* --- Responsive Adjustments --- */
@@ -785,7 +929,8 @@ nav {
     }
 
     .section-two-one-images img {
-        width: 25%; /* Show fewer images at once */
+        width: 25%;
+        /* Show fewer images at once */
     }
 
     .section-two-two-images img {
@@ -813,7 +958,8 @@ nav {
     }
 
     .section-two-one-images img {
-        width: 33%; /* Around 3 images */
+        width: 33%;
+        /* Around 3 images */
     }
 
     .section-two-two-images img {
@@ -828,9 +974,11 @@ nav {
     .section-two-one-images {
         animation-duration: 30s;
     }
+
     .section-two-two-images {
         animation-duration: 35s;
     }
+
     .section-two-three-images {
         animation-duration: 40s;
     }
@@ -846,13 +994,15 @@ nav {
     .section-two-one,
     .section-two-two,
     .section-two-three {
-        width: 100%; /* Full width for image containers */
+        width: 100%;
+        /* Full width for image containers */
     }
 
     .section-two-one-images,
     .section-two-two-images,
     .section-two-three-images {
-        height: 120px; /* Smaller image height */
+        height: 120px;
+        /* Smaller image height */
         padding: 15px 0px 0px 15px;
         gap: 5px;
     }
@@ -860,34 +1010,55 @@ nav {
     .section-two-one-images img,
     .section-two-two-images img,
     .section-two-three-images img {
-        height: 100px; /* Fixed height to control size better on mobile */
-        width: 45%; /* Around 2 images visible */
+        height: 100px;
+        /* Fixed height to control size better on mobile */
+        width: 45%;
+        /* Around 2 images visible */
     }
 
     .section-two-one-images {
         animation-duration: 25s;
     }
+
     .section-two-two-images {
         animation-duration: 28s;
     }
+
     .section-two-three-images {
         animation-duration: 30s;
     }
 
     /* Adjust keyframe translateX values for smaller image widths */
     @keyframes flowone {
-        0% { transform: translateX(0%); }
-        100% { transform: translateX(calc(-100% - 5px * 9)); } /* Adjust based on new image width and gap */
+        0% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(calc(-100% - 5px * 9));
+        }
+
+        /* Adjust based on new image width and gap */
     }
 
     @keyframes flowtwo {
-        0% { transform: translateX(0%); }
-        100% { transform: translateX(calc(-100% - 5px * 8)); }
+        0% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(calc(-100% - 5px * 8));
+        }
     }
 
     @keyframes flowthree {
-        0% { transform: translateX(0%); }
-        100% { transform: translateX(calc(-100% - 5px * 7)); }
+        0% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(calc(-100% - 5px * 7));
+        }
     }
 }
 
@@ -909,15 +1080,18 @@ nav {
     .section-two-two-images img,
     .section-two-three-images img {
         height: 85px;
-        width: 55%; /* Ensure images are still visible */
+        width: 55%;
+        /* Ensure images are still visible */
     }
 
     .section-two-one-images {
         animation-duration: 20s;
     }
+
     .section-two-two-images {
         animation-duration: 22s;
     }
+
     .section-two-three-images {
         animation-duration: 25s;
     }
@@ -942,15 +1116,15 @@ nav {
     flex-direction: column;
 }
 
-.left-paras{
+.left-paras {
     display: flex;
     justify-content: start;
     width: 100%;
 }
 
-.gallery-left-paraone{
-      background-color: rgb(9, 9, 89);
-      padding: 5px 10px 5px 10px;
+.gallery-left-paraone {
+    background-color: rgb(9, 9, 89);
+    padding: 5px 10px 5px 10px;
     display: flex;
     align-items: center;
     border-radius: 20px;
@@ -958,7 +1132,7 @@ nav {
     color: white;
 }
 
-.left h1{
+.left h1 {
     display: flex;
     width: 100%;
     font-size: 40px;
@@ -975,15 +1149,15 @@ nav {
     font-family: Arial, sans-serif;
 }
 
-.left-button{
+.left-button {
     display: flex;
     justify-content: start;
-    width: 100%;   
+    width: 100%;
     padding-top: 35px;
 }
 
-.left-button button{
-     background-color: blueviolet;
+.left-button button {
+    background-color: blueviolet;
     padding: 15px 14px;
     color: white;
     font-size: 17px;
@@ -995,7 +1169,7 @@ nav {
 
 }
 
-.left-button button:hover{
+.left-button button:hover {
     background: linear-gradient(180deg, rgba(211, 231, 232, 1) 0%, rgba(216, 216, 232, 1) 51%, rgba(227, 216, 216, 1) 100%);
     padding: 17px 16px;
     color: blue;
@@ -1003,6 +1177,7 @@ nav {
     align-items: center;
     justify-content: center;
 }
+
 .right {
     width: 50%;
     height: 100%;
@@ -1011,22 +1186,23 @@ nav {
     height: fit-content;
 }
 
-.edit-right{
+.edit-right {
     display: flex;
     justify-content: space-between;
 }
+
 .gallery-right-content {
     padding: 25px 25px 25px 25px;
-     border: rgb(128, 127, 215) solid 1px;
-     margin-bottom: 25px;
-     border-radius: 20px;
-     width: 48%;
-     /* height: 24%; */
+    border: rgb(128, 127, 215) solid 1px;
+    margin-bottom: 25px;
+    border-radius: 20px;
+    width: 48%;
+    /* height: 24%; */
     cursor: pointer;
 }
 
 .gallery-right-content:hover {
-    box-shadow: 4px 4px 80px rgba(255, 255, 255,0.3);
+    box-shadow: 4px 4px 80px rgba(255, 255, 255, 0.3);
 }
 
 .gallery-right-headone {
@@ -1067,13 +1243,13 @@ nav {
     align-items: center;
 }
 
-.fourth-section-part-three{ 
+.fourth-section-part-three {
     display: flex;
     width: 80%;
-    align-items:center;
-   flex-direction: column;
+    align-items: center;
+    flex-direction: column;
     padding: 70px;
-  }
+}
 
 .fourth-section-part {
     display: flex;
@@ -1088,36 +1264,36 @@ nav {
     padding-top: 70px;
 }
 
-#fourth-section-part-three-paraone{
-  font-size: 14px;
-  padding: 10px; 
-  background-color: rgb(9, 9, 89);
-  border: rgb(128, 127, 215) solid 1px;
-  color: white;
-  border-radius: 25px;
-  display: flex;
-  justify-content: center;
+#fourth-section-part-three-paraone {
+    font-size: 14px;
+    padding: 10px;
+    background-color: rgb(9, 9, 89);
+    border: rgb(128, 127, 215) solid 1px;
+    color: white;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
 }
 
-#fourth-section-part-three-head{
-  display: flex;
-  justify-content: center;
-  font-size: 52px;
-  /* width: 80%; */
-  text-align: center;
-  line-height: 1;
-  color: white;
-  padding: 20px 0px 10px 0px;
+#fourth-section-part-three-head {
+    display: flex;
+    justify-content: center;
+    font-size: 52px;
+    /* width: 80%; */
+    text-align: center;
+    line-height: 1;
+    color: white;
+    padding: 20px 0px 10px 0px;
 }
 
-#fourth-section-part-three-paratwo{
- display: flex;
-  justify-content: center;
-  font-size: 16px;
-  width: 80%;
-  text-align: center;
-  color: white;
-  padding: 20px 0px 10px 0px;
+#fourth-section-part-three-paratwo {
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    width: 80%;
+    text-align: center;
+    color: white;
+    padding: 20px 0px 10px 0px;
 }
 
 .fourth-section-content-img {
@@ -1193,13 +1369,15 @@ nav {
 /* --- Media Queries for Hero Section (Section One) --- */
 @media (max-width: 768px) {
     .hero-section {
-        padding-top: 50px; /* Less padding on smaller screens */
+        padding-top: 50px;
+        /* Less padding on smaller screens */
     }
 
     .home-part-one {
         /* padding: 40px; */
-         /* Reduce padding for smaller screens */
-        width: 100%; /* Take up more width on smaller screens */
+        /* Reduce padding for smaller screens */
+        width: 100%;
+        /* Take up more width on smaller screens */
     }
 
     #home-para-one {
@@ -1208,7 +1386,8 @@ nav {
     }
 
     #home-head-one {
-        font-size: 45px; /* Smaller font size for headings */
+        font-size: 45px;
+        /* Smaller font size for headings */
         padding: 15px;
         width: 100%;
     }
@@ -1250,37 +1429,61 @@ nav {
     .section-two-one,
     .section-two-two,
     .section-two-three {
-        width: 90%; /* Increase width on tablets */
+        width: 90%;
+        /* Increase width on tablets */
     }
 
     .section-two-one-images,
     .section-two-two-images,
     .section-two-three-images {
-        height: 180px; /* Slightly smaller height for image rows */
+        height: 180px;
+        /* Slightly smaller height for image rows */
         padding: 25px 0px 0px 25px;
     }
 
     .section-two-one-images img,
     .section-two-two-images img,
     .section-two-three-images img {
-        min-width: 250px; /* Ensure images don't get too small */
+        min-width: 250px;
+        /* Ensure images don't get too small */
         height: 90%;
     }
 
     /* Adjust animation translateX for tablets if fewer images are visible */
     @keyframes flowone {
-        0% { transform: translateX(0%); }
-        100% { transform: translateX(-120%); } /* Example adjustment */
+        0% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(-120%);
+        }
+
+        /* Example adjustment */
     }
 
     @keyframes flowtwo {
-        0% { transform: translateX(0%); }
-        100% { transform: translateX(-140%); } /* Example adjustment */
+        0% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(-140%);
+        }
+
+        /* Example adjustment */
     }
 
     @keyframes flowthree {
-        0% { transform: translateX(0%); }
-        100% { transform: translateX(-150%); } /* Example adjustment */
+        0% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(-150%);
+        }
+
+        /* Example adjustment */
     }
 }
 
@@ -1293,37 +1496,61 @@ nav {
     .section-two-one,
     .section-two-two,
     .section-two-three {
-        width: 95%; /* Even wider on smaller screens */
+        width: 95%;
+        /* Even wider on smaller screens */
     }
 
     .section-two-one-images,
     .section-two-two-images,
     .section-two-three-images {
-        height: 150px; /* Smaller height for image rows */
+        height: 150px;
+        /* Smaller height for image rows */
         padding: 20px 0px 0px 20px;
     }
 
     .section-two-one-images img,
     .section-two-two-images img,
     .section-two-three-images img {
-        min-width: 180px; /* Adjust min-width for mobile */
+        min-width: 180px;
+        /* Adjust min-width for mobile */
         height: 85%;
     }
 
     /* Adjust animation translateX for fewer images shown */
     @keyframes flowone {
-        0% { transform: translateX(0%); }
-        100% { transform: translateX(-150%); } /* Example adjustment */
+        0% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(-150%);
+        }
+
+        /* Example adjustment */
     }
 
     @keyframes flowtwo {
-        0% { transform: translateX(0%); }
-        100% { transform: translateX(-180%); } /* Example adjustment */
+        0% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(-180%);
+        }
+
+        /* Example adjustment */
     }
 
     @keyframes flowthree {
-        0% { transform: translateX(0%); }
-        100% { transform: translateX(-190%); } /* Example adjustment */
+        0% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(-190%);
+        }
+
+        /* Example adjustment */
     }
 }
 
@@ -1349,38 +1576,62 @@ nav {
 
     /* Further adjust animation translateX */
     @keyframes flowone {
-        0% { transform: translateX(0%); }
-        100% { transform: translateX(-200%); } /* More aggressive for small screens */
+        0% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(-200%);
+        }
+
+        /* More aggressive for small screens */
     }
 
     @keyframes flowtwo {
-        0% { transform: translateX(0%); }
-        100% { transform: translateX(-220%); }
+        0% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(-220%);
+        }
     }
 
     @keyframes flowthree {
-        0% { transform: translateX(0%); }
-        100% { transform: translateX(-230%); }
+        0% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(-230%);
+        }
     }
 }
 
 /* --- Media Queries for Gallery Section (Section Three) --- */
 @media (max-width: 1024px) {
     .gallery {
-        flex-direction: column; /* Stack columns vertically */
-        min-height: auto; /* Allow height to adjust to content */
+        flex-direction: column;
+        /* Stack columns vertically */
+        min-height: auto;
+        /* Allow height to adjust to content */
         padding: 30px 20px;
     }
 
-    .left{
-        width: 90%; /* Make them full width */
+    .left {
+        width: 90%;
+        /* Make them full width */
         padding: 80px 60px 0px 60px;
-        height: auto; /* Adjust height */
+        height: auto;
+        /* Adjust height */
     }
+
     .right {
-        width: 90%; /* Make them full width */
+        width: 90%;
+        /* Make them full width */
         padding: 20px;
-        height: auto; /* Adjust height */
+        height: auto;
+        /* Adjust height */
     }
 
     .gallery-left-para {
@@ -1407,7 +1658,8 @@ nav {
 
     .left,
     .right {
-        width: 95%; /* Slightly more width on mobile */
+        width: 95%;
+        /* Slightly more width on mobile */
         padding: 15px;
     }
 
@@ -1432,9 +1684,11 @@ nav {
     .gallery {
         padding: 15px 10px;
     }
+
     .left h1 {
         font-size: 32px;
     }
+
     .gallery-left-para {
         font-size: 14px;
     }
@@ -1454,41 +1708,51 @@ nav {
 
 /* --- Media Queries for Section Four (Content with Images) --- */
 @media (max-width: 1350px) {
-  .fourth-section-part-three{
-    width: 90%;
-    padding:10px;
-    align-items: none;
-  }
-    .fourth-section-part {
-        flex-direction: column; /* Stack them vertically */
+    .fourth-section-part-three {
         width: 90%;
-        padding-top: 50px; /* Adjust spacing */
+        padding: 10px;
+        align-items: none;
     }
-    .fourth-section-part-two {
-        flex-direction: column-reverse; /* Stack them vertically */
+
+    .fourth-section-part {
+        flex-direction: column;
+        /* Stack them vertically */
         width: 90%;
-        
-        padding-top: 50px; /* Adjust spacing */
+        padding-top: 50px;
+        /* Adjust spacing */
+    }
+
+    .fourth-section-part-two {
+        flex-direction: column-reverse;
+        /* Stack them vertically */
+        width: 90%;
+
+        padding-top: 50px;
+        /* Adjust spacing */
     }
 
     .fourth-section-content-img,
     .fourth-section-all {
-        width: 100%; /* Take full width */
+        width: 100%;
+        /* Take full width */
         margin-bottom: 20px;
         padding: 10px;
     }
 
     .fourth-section-content-img {
-        margin-bottom: 30px; /* Add space between image and text */
+        margin-bottom: 30px;
+        /* Add space between image and text */
     }
 
     .fourth-section-content-img-two img {
-        width: 100%; /* Adjust image width to fit container */
+        width: 100%;
+        /* Adjust image width to fit container */
         height: auto;
     }
 
     .fourth-section-headingone {
-        width:180px; /* Allow width to adjust ----------------------------*/
+        width: 180px;
+        /* Allow width to adjust ----------------------------*/
         font-size: 15px;
     }
 
@@ -1504,6 +1768,7 @@ nav {
 }
 
 @media (max-width: 768px) {
+
     .fourth-section-part,
     .fourth-section-part-two {
         padding-top: 30px;
@@ -1531,12 +1796,13 @@ nav {
 }
 
 @media (max-width: 480px) {
+
     .fourth-section-part,
     .fourth-section-part-two {
         padding-top: 20px;
     }
 
-       .fourth-section-headingone {
+    .fourth-section-headingone {
         font-size: 12px;
         width: 61%;
         align-content: flex-start;
@@ -1545,6 +1811,7 @@ nav {
         padding: 3px 6px;
         margin: 15px 0;
     }
+
     .fourth-section-headingtwo {
         font-size: 32px;
     }
@@ -1559,483 +1826,5 @@ nav {
     }
 }
 
-/* FOOTER */
 
-/* FOOTER */
-.footer-partone {
-    width: 100%;
-    /* height: 100%; removed fixed height for responsiveness */
-    background-color: rgb(0, 0, 0);
-    display: flex;
-    padding: 100px; /* Will adjust for smaller screens */
-    justify-content: space-evenly;
-    flex-wrap: wrap; /* Allows columns to wrap to the next line */
-    gap: 30px; /* Adds space between wrapped items */
-}
 
-/* FOOTER FIRST SECTION INFORAG */
-.footer-inforag {
-    width: 30%; /* Will adjust */
-    /* justify-content: space-between; This is for flex containers, not direct content. */
-}
-
-.footer-image {
-    padding-bottom: 25px;
-}
-
-.footer-image img {
-    width: 65%; /* Will adjust */
-    height: auto; /* Ensure image scales proportionally */
-    display: block; /* Removes extra space below image */
-}
-
-.footer-dis {
-    font-size: 17px;
-    font-weight: 550;
-    color: white;
-    padding-bottom: 25px;
-    line-height: 1.6; /* Improve readability */
-}
-
-.footer-logo svg {
-    color: white;
-    margin-right: 13px;
-    font-size: 24px; /* Default size for social icons */
-}
-
-/* FOOTER QUICKLINKS */
-.footer-quicklink {
-    width: 15%; /* Will adjust */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.footer-quicklink  ul{margin-top: none !important;}
-.footer-quicklink a {
-    text-decoration: none;
-    color: white;
-    display: block; /* Make the whole link clickable */
-}
-
-.footer-quicklink a:hover {
-    color: rgb(84, 18, 150);
-    transition: color 0.3s ease;
-}
-
-#heading {
-    font-size: 19px;
-    font-family: sans-serif;
-    color: white;
-    padding-bottom: 25px;
-    white-space: nowrap; /* Prevents heading from wrapping unless explicitly forced */
-}
-
-.footer-quicklink li {
-    display: flex; /* Keep display flex for icon/text alignment if desired */
-    font-size: 16px;
-    font-weight: 700;
-    color: white; /* Redundant if a is styled */
-    padding-bottom: 20px;
-    font-family: sans-serif;
-    /* text-decoration: none; This is on the a tag */
-}
-
-.footer-login-btn{display:flex !important;
-justify-content:start !important;
-height: 25%;
-align-items: center;
-}
-
-.footer-login-btn a{display:flex !important;
-justify-content:start !important;
-height: 25%;
-width: 80%;
-align-items: center;
-}
-.footer-login-btn button{
-    display: flex;
-    justify-content: center;
-    background-color: blueviolet;
-    padding: 20px 25px;
-    color: white;
-    font-size: 18px;
-    border: none;
-    border-radius: 35px;
-    cursor: pointer;
-    white-space: nowrap;
-    transition: all 0.3s ease;
-    width: 90%;
-}
-
-.footer-login-btn button:hover{
-     background: linear-gradient(180deg, rgba(211, 231, 232, 1) 0%, rgba(216, 216, 232, 1) 51%, rgba(227, 216, 216, 1) 100%);
-     padding: 22px 27px;
-    color: blue;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.footer-quicklink li:hover {
-    color: rgb(84, 18, 150); /* Applied to li directly, but a:hover is more specific */
-    transition: color 0.3s ease;
-}
-
-/* FOOTER SERVICES */
-.footer-service {
-    width: 20%; /* Will adjust */
-}
-
-#heading-two {
-    font-size: 19px;
-    font-family: sans-serif;
-    color: white;
-    padding-bottom: 25px;
-    white-space: nowrap;
-}
-
-.footer-service li {
-    display: flex;
-    font-size: 16px;
-    font-weight: 700;
-    color: white;
-    padding-bottom: 20px;
-    font-family: sans-serif;
-    text-decoration: none; /* Redundant if a is styled */
-}
-
-.footer-service a { /* Add a style for service links */
-    text-decoration: none;
-    color: white;
-    display: block;
-}
-
-.footer-service a:hover {
-    color: rgb(84, 18, 150);
-    transition: color 0.3s ease;
-}
-
-
-/* FOOTER CONTACTS */
-.footer-contact {
-    width: 15%; /* Will adjust */
-}
-
-#heading-three {
-    font-size: 19px;
-    font-family: sans-serif;
-    color: white;
-    padding-bottom: 25px;
-    white-space: nowrap;
-}
-
-.footer-contact-loc,
-.footer-contact-phoneno,
-.footer-contact-mail,
-.footer-contact-time {
-    display: flex;
-    padding-bottom: 20px;
-    align-items: flex-start; /* Align icon to top if text wraps */
-}
-
-.footer-contact-logo {
-    margin-right: 13px;
-    padding-top: 5px; /* Aligns icon with text */
-    color: white;
-    font-size: 18px; /* Consistent icon size */
-    flex-shrink: 0; /* Prevent icon from shrinking */
-}
-
-.footer-contact-location a,
-.contact-no a,
-.mail-add a {
-    text-decoration: none;
-    font-size: 16px;
-    font-family: sans-serif;
-    color: white;
-    display: block; /* Make links block level to fill space */
-    line-height: 1.4; /* Improve readability for contact text */
-}
-
-.footer-contact-location a:hover,
-.contact-no a:hover,
-.mail-add a:hover {
-    color: rgb(84, 18, 150);
-    transition: color 0.3s ease;
-}
-
-.contact-no li,
-.mail-add li,
-.office li {
-    list-style-type: none; /* Remove default list bullets */
-    padding-bottom: 3px;
-    font-size: 16px;
-    font-family: sans-serif;
-    color: white; /* Redundant if a is styled */
-}
-
-/* FOOTER-PARTTWO (Copyright/Bottom Bar) */
-.footer-parttwo {
-    display: flex;
-    padding: 30px; /* Will adjust */
-    align-items: center;
-    justify-content: center;
-    /* background-color: rgb(37, 16, 16); */
-    color: white;
-    border-top: solid white 0.5px;
-    font-size: 15px; /* Default font size for copyright */
-    text-align: center; /* Ensure text is centered */
-}
-
-.footer-parttwo a{
-    color:white;
-    text-decoration: none;
-    
-}
-
-
-/* --------------------------------------------------- */
-/* RESPONSIVE STYLES (MEDIA QUERIES)                   */
-/* --------------------------------------------------- */
-
-/* Tablets and smaller desktops (max-width: 1024px) */
-@media (max-width: 1024px) {
-    .footer-partone {
-        padding: 60px; /* Reduce padding */
-        gap: 40px; /* Increase gap between columns */
-    }
-
-    /* Adjust widths for 2 columns or 3 if space allows */
-    .footer-inforag {
-        width: 45%; /* Two columns per row */
-    }
-
-    .footer-quicklink,
-    .footer-service,
-    .footer-contact {
-        width: 45%; /* Two columns per row */
-    }
-
-    .footer-image img {
-        width: 80%; /* Make image larger within its column */
-    }
-
-    .footer-dis {
-        font-size: 16px;
-    }
-
-    #heading,
-    #heading-two,
-    #heading-three {
-        font-size: 18px; /* Slightly smaller headings */
-        padding-bottom: 20px;
-    }
-
-    .footer-quicklink li,
-    .footer-service li,
-    .footer-contact-location a,
-    .contact-no li,
-    .mail-add li,
-    .office li {
-        font-size: 15px; /* Slightly smaller link text */
-        padding-bottom: 15px;
-    }
-
-    .footer-logo svg {
-        font-size: 22px; /* Smaller social icons */
-    }
-
-    .footer-contact-logo {
-        font-size: 16px; /* Smaller contact icons */
-    }
-
-    .footer-parttwo {
-        padding: 25px;
-        font-size: 14px;
-    }
-}
-
-/* Mobile devices (max-width: 768px) */
-@media (max-width: 768px) {
-    .footer-partone {
-        padding: 40px 20px; /* Further reduce padding */
-        flex-wrap: wrap; /* Stack all columns vertically */
-        align-items: center; /* Center items when stacked */
-        gap: 30px; /* Space between stacked sections */
-    }
-
-    .footer-login-btn{display:flex !important;
-justify-content:center !important;
-
-}
-
-    .footer-inforag,
-    .footer-quicklink,
-    .footer-service,
-    .footer-contact {
-        width: 100%; /* Each column takes almost full width */
-        text-align: left; /* Center text within columns */
-        padding: 10px; /* Remove column-specific padding, use section padding */
-    }
-
-    /* Adjust specific elements to be centered for mobile */
-    .footer-image {
-        padding-bottom: 15px;
-    }
-    .footer-image img {
-        width: 60%; /* Adjust image size for mobile */
-        max-width: 200px; /* Prevent image from becoming too large */
-        margin: 0 auto; /* Center the image */
-    }
-
-    .footer-dis {
-        font-size: 15px;
-        padding-bottom: 15px;
-    }
-    .footer-login-btn a{
-        display: none !important;
-    }
-    .footer-logo {
-        text-align: left; /* Center social icons */
-        margin-top: 10px;
-    }
-    .footer-logo svg {
-        font-size: 20px;
-        margin: 0 8px; /* Adjust margin between icons */
-    }
-
-    #heading,
-    #heading-two,
-    #heading-three {
-        font-size: 17px; /* Smaller headings */
-        padding-bottom: 15px;
-        white-space: normal; /* Allow headings to wrap if needed */
-    }
-
-    /* Center list items for quicklinks/services */
-    .footer-quicklink ul,
-    .footer-service ul {
-        list-style: none; /* Ensure no bullets if padding is messed up */
-        padding: 0;
-    }
-    .footer-quicklink li,
-    .footer-service li {
-        justify-content: left; /* Center list items if they contain text only */
-        font-size: 14px;
-        padding-bottom: 12px;
-    }
-
-    /* Contact info adjustments */
-    .footer-contact-loc,
-    .footer-contact-phoneno,
-    .footer-contact-mail,
-    .footer-contact-time {
-        justify-content: left; /* Center the icon+text block */
-        flex-direction: row; /* Keep icon and text side-by-side */
-        align-items: flex-start; /* Align icon to top */
-        padding-bottom: 15px;
-        text-align: left; /* Text itself remains left-aligned relative to icon */
-    }
-
-    .footer-contact-logo {
-        margin-right: 10px;
-        padding-top: 2px; /* Smaller padding for icon alignment */
-        font-size: 15px; /* Smaller icons */
-    }
-
-    .footer-contact-location a,
-    .contact-no a,
-    .mail-add a,
-    .office li {
-        font-size: 14px;
-        text-align: left; /* Ensures text is left aligned within its area */
-    }
-
-    .footer-parttwo {
-        padding: 20px;
-        font-size: 13px;
-    }
-}
-
-/* Extra small mobile devices (max-width: 480px) */
-@media (max-width: 480px) {
-    .edit-right{
-        flex-direction: column;
-    }
-    .gallery-right-content{
-        width: 100%;
-    }
-    #fourth-section-part-three-head {
-        font-size: 32px;
-    }
-    .fourth-section-content{
-        padding: 0;
-    }
-    .fourth-section-part-three{
-        width: 100%;
-    }
-    .footer-partone {
-        padding: 30px 15px; /* Smallest padding */
-        gap: 25px; /* Smaller gap */
-    }
-
-    .footer-inforag,
-    .footer-quicklink,
-    .footer-service,
-    .footer-contact {
-        width: 95%; /* Take maximum width */
-    }
-
-    .footer-image img {
-        width: 50%;
-        max-width: 150px;
-    }
-
-    .footer-dis {
-        font-size: 14px;
-        padding-bottom: 10px;
-    }
-
-    .footer-logo svg {
-        font-size: 18px;
-        margin: 0 6px;
-    }
-
-    #heading,
-    #heading-two,
-    #heading-three {
-        font-size: 16px;
-        padding-bottom: 10px;
-    }
-
-    .footer-quicklink li,
-    .footer-service li {
-        font-size: 13px;
-        padding-bottom: 10px;
-    }
-
-    .footer-contact-loc,
-    .footer-contact-phoneno,
-    .footer-contact-mail,
-    .footer-contact-time {
-        padding-bottom: 10px;
-    }
-
-    .footer-contact-logo {
-        margin-right: 8px;
-        font-size: 14px;
-    }
-
-    .footer-contact-location a,
-    .contact-no a,
-    .mail-add a,
-    .office li {
-        font-size: 13px;
-    }
-
-    .footer-parttwo {
-        padding: 15px;
-        font-size: 12px;
-    }
-}
