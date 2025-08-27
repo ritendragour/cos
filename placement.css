@@ -88,7 +88,7 @@ body {
 #partone-one-headfour {
     font-size: 15px;
     font-family: sans-serif;
-    padding: 6px 15px 4px 15px; /* Increased horizontal padding */
+    padding : 6px 15px;
     background-color: rgba(7, 7, 248, 0.3);
     width: fit-content; /* Use fit-content to allow it to shrink/grow with text */
     color: white;
@@ -103,7 +103,7 @@ body {
 
 .one-partone-two img {
     width: 100%;
-    height: 77%; /* Will need adjustment for responsiveness */
+    height: 90%; /* Will need adjustment for responsiveness */
     object-fit: cover;
     border-radius: 15px;
     display: block; /* Remove extra space below img */
