@@ -725,17 +725,14 @@ nav {
     background: radial-gradient(circle, rgba(255, 255, 255, 1) 35%, rgba(187, 177, 222, 1) 87%);
 }
 
-/* SECOND-SECTION-HOME-PAGE */
+/* Section Base */
 .section-two {
     width: 100%;
-    height: 100%;
     display: flex;
     background-color: black;
     flex-direction: column;
-    /* Stack content vertically on smaller screens */
     align-items: center;
     overflow: hidden;
-    /* Hide overflow to prevent horizontal scrollbar on the main section */
 }
 
 .sec-two {
@@ -752,348 +749,80 @@ nav {
     font-family: sans-serif;
     font-weight: 500;
     font-size: 45px;
-    /* Added a base font size */
 }
 
-/* Base styles for the overflowing containers */
-.section-two-one {
-    overflow: hidden;
-    /* Hide scrollbar for all browsers */
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+/* Slider */
+.slider-container {
     width: 80%;
-    /* Start with full width and adjust inner content */
-    margin-bottom: 20px;
-    /* Space between rows */
-}
-
-.section-two-two {
     overflow: hidden;
-    /* Hide scrollbar for all browsers */
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    width: 80%;
-    /* Start with full width and adjust inner content */
-    margin-bottom: 20px;
-    /* Space between rows */
+    position: relative;
+    margin-bottom: 40px;
 }
 
-.section-two-three {
-    overflow: hidden;
-    /* Hide scrollbar for all browsers */
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    width: 65%;
-    /* Start with full width and adjust inner content */
-    margin-bottom: 20px;
-    /* Space between rows */
-}
-
-/* Hide scrollbar for Webkit browsers */
-.section-two-one::-webkit-scrollbar,
-.section-two-two::-webkit-scrollbar,
-.section-two-three::-webkit-scrollbar {
-    display: none;
-}
-
-/* Styles for the image containers that will be animated */
-.section-two-one-images,
-.section-two-two-images,
-.section-two-three-images {
+.slider {
     display: flex;
-    height: 210px;
-    gap: 10px;
-    padding: 35px 0px 0px 35px;
-    /* Keep initial padding */
-    white-space: nowrap;
-    /* Prevent images from wrapping */
+    gap: 40px;
+    animation: scroll 15s linear infinite;
     will-change: transform;
-    /* Optimize for animation */
-
-    object-fit: fill;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
 }
 
-/* Specific animation names and durations */
-.section-two-one-images {
-    animation-name: flowone;
-    animation-duration: 40s;
-    /* Increased duration for smoother flow */
-}
-
-.section-two-two-images {
-    animation-name: flowtwo;
-    animation-duration: 45s;
-    /* Slightly different duration */
-    animation-delay: 1s;
-}
-
-.section-two-three-images {
-    animation-name: flowthree;
-    animation-duration: 50s;
-    /* Different duration */
-}
-
-/* Keyframes for the continuous scrolling effect */
-@keyframes flowone {
-    0% {
-        transform: translateX(0%);
-    }
-
-    100% {
-        transform: translateX(calc(-100% - 10px * 9));
-    }
-
-    /* Adjust based on number of images and gap */
-}
-
-@keyframes flowtwo {
-    0% {
-        transform: translateX(0%);
-    }
-
-    100% {
-        transform: translateX(calc(-100% - 10px * 8));
-    }
-
-    /* Adjust based on number of images and gap */
-}
-
-@keyframes flowthree {
-    0% {
-        transform: translateX(0%);
-    }
-
-    100% {
-        transform: translateX(calc(-100% - 10px * 7));
-    }
-
-    /* Adjust based on number of images and gap */
-}
-
-
-.section-two-one-images img,
-.section-two-two-images img,
-.section-two-three-images img {
-    height: 90%;
+.slider img {
+    height: 170px;
     border-radius: 10px;
-    object-fit: cover;
-    /* Ensure images cover their area */
     flex-shrink: 0;
-    /* Prevent images from shrinking */
+    object-fit: contain;
+    /* filter: grayscale(100%); */
     transition: all 0.3s ease;
-    /* Smooth transition for hover effects */
 }
 
-/* Image widths - ensure these add up to more than 100% for smooth looping */
-.section-two-one-images img {
-    width: 20%;
-}
-
-/* Example: 5 images fill 100%, 6 images fill 120% */
-
-.section-two-two-images img {
-    width: 22%;
-    /* Example: 5 images fill 110% */
-}
-
-.section-two-three-images img {
-    width: 23%;
-    /* Example: 5 images fill 115% */
-}
-
-.section-two-one-images img:hover,
-.section-two-two-images img:hover,
-.section-two-three-images img:hover {
+.slider img:hover {
+    filter: grayscale(0%);
     transform: scale(1.05);
-    /* Slightly scale on hover */
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-    /* Add a subtle shadow */
 }
 
-/* --- Responsive Adjustments --- */
+/* Animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
 
-/* Tablets and larger phones */
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive */
 @media (max-width: 1024px) {
     #section-two-head-one {
-        padding: 80px 20px;
-        font-size: 40px;
+        padding: 60px 40px;
+        font-size: 38px;
     }
 
-    .section-two-one-images,
-    .section-two-two-images,
-    .section-two-three-images {
-        height: 180px;
-        padding: 25px 0px 0px 25px;
-    }
-
-    .section-two-one-images img {
-        width: 25%;
-        /* Show fewer images at once */
-    }
-
-    .section-two-two-images img {
-        width: 28%;
-    }
-
-    .section-two-three-images img {
-        width: 30%;
+    .slider img {
+        height: 100px;
     }
 }
 
-/* Smaller tablets and large phones (portrait) */
 @media (max-width: 768px) {
     #section-two-head-one {
-        padding: 60px 15px;
-        font-size: 35px;
+        padding: 40px 20px;
+        font-size: 30px;
     }
 
-    .section-two-one-images,
-    .section-two-two-images,
-    .section-two-three-images {
-        height: 150px;
-        padding: 20px 0px 0px 20px;
-        gap: 8px;
-    }
-
-    .section-two-one-images img {
-        width: 33%;
-        /* Around 3 images */
-    }
-
-    .section-two-two-images img {
-        width: 36%;
-    }
-
-    .section-two-three-images img {
-        width: 38%;
-    }
-
-    /* Adjust animation durations for smaller screens as there's less content to scroll */
-    .section-two-one-images {
-        animation-duration: 30s;
-    }
-
-    .section-two-two-images {
-        animation-duration: 35s;
-    }
-
-    .section-two-three-images {
-        animation-duration: 40s;
+    .slider img {
+        height: 80px;
     }
 }
 
-/* Mobile devices */
 @media (max-width: 480px) {
     #section-two-head-one {
-        padding: 40px 10px;
-        font-size: 28px;
-    }
-
-    .section-two-one,
-    .section-two-two,
-    .section-two-three {
-        width: 100%;
-        /* Full width for image containers */
-    }
-
-    .section-two-one-images,
-    .section-two-two-images,
-    .section-two-three-images {
-        height: 120px;
-        /* Smaller image height */
-        padding: 15px 0px 0px 15px;
-        gap: 5px;
-    }
-
-    .section-two-one-images img,
-    .section-two-two-images img,
-    .section-two-three-images img {
-        height: 100px;
-        /* Fixed height to control size better on mobile */
-        width: 45%;
-        /* Around 2 images visible */
-    }
-
-    .section-two-one-images {
-        animation-duration: 25s;
-    }
-
-    .section-two-two-images {
-        animation-duration: 28s;
-    }
-
-    .section-two-three-images {
-        animation-duration: 30s;
-    }
-
-    /* Adjust keyframe translateX values for smaller image widths */
-    @keyframes flowone {
-        0% {
-            transform: translateX(0%);
-        }
-
-        100% {
-            transform: translateX(calc(-100% - 5px * 9));
-        }
-
-        /* Adjust based on new image width and gap */
-    }
-
-    @keyframes flowtwo {
-        0% {
-            transform: translateX(0%);
-        }
-
-        100% {
-            transform: translateX(calc(-100% - 5px * 8));
-        }
-    }
-
-    @keyframes flowthree {
-        0% {
-            transform: translateX(0%);
-        }
-
-        100% {
-            transform: translateX(calc(-100% - 5px * 7));
-        }
-    }
-}
-
-/* Smallest mobile devices */
-@media (max-width: 320px) {
-    #section-two-head-one {
+        padding: 30px 15px;
         font-size: 22px;
-        padding: 30px 5px;
     }
 
-    .section-two-one-images,
-    .section-two-two-images,
-    .section-two-three-images {
-        height: 100px;
-        padding: 10px 0px 0px 10px;
-    }
-
-    .section-two-one-images img,
-    .section-two-two-images img,
-    .section-two-three-images img {
-        height: 85px;
-        width: 55%;
-        /* Ensure images are still visible */
-    }
-
-    .section-two-one-images {
-        animation-duration: 20s;
-    }
-
-    .section-two-two-images {
-        animation-duration: 22s;
-    }
-
-    .section-two-three-images {
-        animation-duration: 25s;
+    .slider img {
+        height: 60px;
     }
 }
 
@@ -1278,8 +1007,8 @@ nav {
 #fourth-section-part-three-head {
     display: flex;
     justify-content: center;
-    font-size: 52px;
-    /* width: 80%; */
+    font-size: 31px;
+    width: 100%;
     text-align: center;
     line-height: 1;
     color: white;
@@ -1372,7 +1101,10 @@ nav {
         padding-top: 50px;
         /* Less padding on smaller screens */
     }
-
+    .content-first-home-page{
+        display: flex;
+        justify-content: center;
+    }
     .home-part-one {
         /* padding: 40px; */
         /* Reduce padding for smaller screens */
@@ -1406,7 +1138,7 @@ nav {
 
 @media (max-width: 480px) {
     #home-head-one {
-        font-size: 35px;
+        font-size: 24px;
     }
 
     #home-para-two {
@@ -1418,7 +1150,11 @@ nav {
         font-size: 14px;
     }
 }
-
+@media (max-width: 350px) {
+    #home-para-one{
+        width: 80% !important;
+    }
+}
 /* --- Media Queries for Section Two (Scrolling Images) --- */
 @media (max-width: 1024px) {
     #section-two-head-one {
@@ -1658,7 +1394,7 @@ nav {
 
     .left,
     .right {
-        width: 95%;
+        width: 100%;
         /* Slightly more width on mobile */
         padding: 15px;
     }
@@ -1686,7 +1422,7 @@ nav {
     }
 
     .left h1 {
-        font-size: 32px;
+        font-size: 23px;
     }
 
     .gallery-left-para {
@@ -1705,7 +1441,11 @@ nav {
         font-size: 14px;
     }
 }
-
+@media (max-width : 480px) {
+    .gallery-right-content{
+        width: 100%;
+    }
+}
 /* --- Media Queries for Section Four (Content with Images) --- */
 @media (max-width: 1350px) {
     .fourth-section-part-three {
@@ -1825,6 +1565,3 @@ nav {
         font-size: 14px;
     }
 }
-
-
-
