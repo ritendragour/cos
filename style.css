@@ -211,7 +211,7 @@ body {
 .gallery {
     display: flex;
     justify-content: center;
-    min-height: 155vh;
+    /* min-height: 155vh; */
     background-color: #08010c;
     padding: 50px 50px 0px 50px;
 }
