@@ -169,15 +169,17 @@ nav {
     width: 30%;
     border-right: 1px solid #ccc;
     color: white;
-    background-color:black;
+    background-color: black;
     padding: 10px 0;
     /* Add some vertical padding */
     box-sizing: border-box;
 }
-#course-list li a{
+
+#course-list li a {
     text-decoration: none;
     color: white;
 }
+
 .dropdown-panel .categories li {
     list-style: none;
     padding: 10px 20px;
@@ -1239,3 +1241,24 @@ nav {
         font-size: 12px;
     }
 }
+
+
+
+
+/* common CSS */
+  /* .dnm {
+        display: none !important;
+    }
+
+    .dnm {
+        display: block !important;
+    }
+@media (max-width:1350px) {
+    .dnm {
+        display: block !important;
+    }
+
+    .dnm {
+        display: none !important;
+    }
+} */

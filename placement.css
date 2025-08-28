@@ -166,7 +166,7 @@ body {
 }
 
 .parttwo-card:hover {
-    width: 95%; /* Slightly larger on hover */
+    width: 100%; /* Slightly larger on hover */
     height: 155px;
     box-shadow: 4px 4px 80px rgba(255, 255, 255, 0.2);
 }
@@ -1207,7 +1207,9 @@ body {
     }
 
     .card-cover {
-        width: 95%;
+        width: 90%;
+        display: flex;
+        justify-content: center;
         margin-bottom: 20px;
     }
 
